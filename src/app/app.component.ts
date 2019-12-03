@@ -18,14 +18,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class AppComponent {
 
-
   constructor(
     private router: Router,
   ) {}
 
   title = 'Gewerblichen Schule Backnang';
   introduction = 'Beim Klick auf den Button werden Sie auf die Hauptseite der Anwendung weitergeleitet';
-  navigate() {
-    this.router.navigate(['/main']);
+
+  login() {
+
   }
 }

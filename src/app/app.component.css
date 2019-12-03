@@ -11,6 +11,9 @@
 }
 
 .btn {
-  margin-top: 2cm;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 1cm;
+  margin-left: 10cm;
   size: 200%;
 }

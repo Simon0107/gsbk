@@ -4,6 +4,14 @@
   </h1>
 </div>
 
-<app-dashboard></app-dashboard>
+<div>
+  <h2>Benutzername</h2>
+  <input type="text">
 
+  <h2>Passwort</h2>
+  <input type="password">
+</div>
+<div>
+  <button class="btn" routerLink="/dashboard" onclick="login()">Anmelden</button>
+</div>
 <router-outlet></router-outlet>

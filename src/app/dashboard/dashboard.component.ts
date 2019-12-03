@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GuardsCheckEnd } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  text = 'Durch Klicken auf den Button kommen Sie auf die Haupseite der Anwendung';
   constructor() { }
+
+  colors: any[] = [
+    {id: 1, farbe: 'Gruen'},
+    {id: 2, farbe: 'Rot'},
+    {id: 3, farbe: 'Blau'}
+  ];
 
   ngOnInit() {
   }

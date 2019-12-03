@@ -1,7 +1,10 @@
 <div class="entrydiv">
-  <img  width="300" alt="Angular Logo" src="../assets/gsbk.png">
-  <p class="entrydiv">{{text}}</p>
-  <button color="primary"  routerLink="/main" >Weiter</button>
+<form action="select">
+  <select name="Farbe" placeholder="Farbe">
+    <option *ngFor="let colors of colors" value="colors">{{colors.farbe}}</option>
+  </select>
+</form>
+<button class="btn" type="submit">Bestätigen</button>
 </div>
 
 <router-outlet></router-outlet>
