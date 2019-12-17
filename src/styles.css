@@ -27,6 +27,8 @@ button {
     margin-right: 0.5cm;
     margin-top: 0.5cm;
     margin-bottom: 0.5cm;
+    font-family: sans-serif;
+    text-align: center;
   }
 
   select {
