@@ -4,14 +4,18 @@
   </h1>
 </div>
 
-<div>
-  <h2>Benutzername</h2>
-  <input type="text">
 
-  <h2>Passwort</h2>
-  <input type="password">
+<div class="entrydiv" *ngIf="viewState=='login'">
+  <table class="tbl">
+    <tr>
+      <h3>Benutzername</h3>
+      <input [(ngModel)]="inputUsr" type="text">
+
+      <h3>Passwort</h3>
+      <input [(ngModel)]="inputPw" type="password">
+    </tr>
+  </table>
+  
 </div>
-<div>
-  <button class="btn" routerLink="/dashboard" onclick="login()">Anmelden</button>
-</div>
+<button class="btn" (click)="login()" *ngIf="viewState=='login'">Anmelden</button>
 <router-outlet></router-outlet>

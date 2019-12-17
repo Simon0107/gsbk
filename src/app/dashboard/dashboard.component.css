@@ -1,16 +1,20 @@
 .entrydiv{
   text-align: center;
-  margin-top: 2cm;
+  border: 5cm;
   font-family: sans-serif;
+  margin-top: 2cm;
+
 }
 
 .entryheader {
 text-align: center;
 font-family: sans-serif;
+color: white;
 overflow:hidden;
+background-color: black;
+border-radius: 25px;
 }
 
-.btn {
-margin-top: 2cm;
-size: 200%;
+button {
+  margin-left: -4.5cm;
 }

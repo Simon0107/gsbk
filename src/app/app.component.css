@@ -1,19 +1,27 @@
 .entrydiv{
     text-align: center;
-    margin-top: 2cm;
+    border: 5cm;
     font-family: sans-serif;
 }
 
 .entryheader {
   text-align: center;
   font-family: sans-serif;
+  color: white;
   overflow:hidden;
+  background-color: black;
+  border-radius: 25px;
 }
 
-.btn {
-  font-family: sans-serif;
-  text-align: center;
+.tbl {
+  background-color: rgb(166, 255, 228);
   margin-top: 1cm;
-  margin-left: 10cm;
-  size: 200%;
+  margin-left: 15.3cm;
+  border-radius: 25px;
+  
 }
+.tbl:hover {
+  border-color:rgb(122, 255, 215);
+  background-color: rgb(122, 255, 215);
+}
+

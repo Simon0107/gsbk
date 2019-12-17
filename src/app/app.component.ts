@@ -1,8 +1,8 @@
 import { AppRoutingModule } from './app-routing.module';
-import { Component } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from './entities/user';
+import { BackendService } from '../../services/backend.service';
 
 @Component({
   selector: 'app-root',
@@ -13,19 +13,34 @@ import { ActivatedRoute, Router } from '@angular/router';
 /**
  * @author Simon Meier
  * Entry Point of the application
- * -> redirection to the main component
  */
-
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private backend: BackendService,
   ) {}
+
+  @Input() inputUsr: string;
+  @Input() inputPw: string;
+  viewState: string;
+
+  usr: string ="sme";
+  pw: string ="123";
 
   title = 'Gewerblichen Schule Backnang';
   introduction = 'Beim Klick auf den Button werden Sie auf die Hauptseite der Anwendung weitergeleitet';
 
-  login() {
+  ngOnInit() {
+    this.viewState = 'login';
+  }
 
+
+  login() {
+    if(this.inputPw && this.inputUsr) {
+      this.backend.login(this.inputPw, this.inputUsr);
+      this.viewState = 'dashboard';
+      this.router.navigate(['/dashboard']);
+    }
   }
 }
