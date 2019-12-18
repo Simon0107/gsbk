@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GuardsCheckEnd } from '@angular/router';
+import { GuardsCheckEnd, Router } from '@angular/router';
+import { AppComponent } from 'app/app.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,17 +8,42 @@ import { GuardsCheckEnd } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  constructor() { }
-
+  
   colors: any[] = [
     {id: 1, farbe: 'Gruen'},
     {id: 2, farbe: 'Rot'},
     {id: 3, farbe: 'Blau'}
   ];
 
+  viewstate:string='pen';
+  constructor(
+    public app: AppComponent,
+    private router: Router,
+  ) {
+    this.app.viewState='dashboard';
+   }
+
+
   ngOnInit() {
   }
 
+  logout() {
+    this.app.viewState ='login';
+    this.app.inputPw='';
+    this.app.inputUsr='';
+    this.router.navigate(['/']);
+  }
 
+
+  pen() {
+    this.viewstate='pen';
+  }
+  ind() {
+    this.viewstate='ind';
+  }
+
+  sch() {
+    this.viewstate='sch';
+  }
 
 }

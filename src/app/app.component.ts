@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   @Input() inputUsr: string;
   @Input() inputPw: string;
-  viewState: string;
+  public viewState: string;
 
   usr: string ="sme";
   pw: string ="123";
@@ -34,7 +34,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.viewState = 'login';
   }
-
 
   login() {
     if(this.inputPw && this.inputUsr) {

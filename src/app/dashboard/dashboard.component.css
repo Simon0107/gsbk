@@ -18,3 +18,17 @@ border-radius: 25px;
 button {
   margin-left: -4.5cm;
 }
+table {
+  background-color: rgb(170, 180, 180);
+  margin-left: 4cm;
+  border-radius: 30px;
+  margin-bottom: 1cm;
+}
+td {
+  padding-left: 2cm;
+  padding-right: 2cm;
+  border-radius: 30px;
+}
+td:hover {
+  background-color: rgb(141, 148, 148); 
+}

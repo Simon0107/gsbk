@@ -1,13 +1,37 @@
 <div class="entrydiv">
-<form action="select">
-  <select name="Farbe" placeholder="Farbe">
-    <option *ngFor="let colors of colors" value="colors">{{colors.farbe}}</option>
-  </select>
-</form>
-<button class="btn" type="submit">Bestätigen</button>
+  <table>
+    <tr>
+      <td (click)="pen()">
+        <h2>Stift bestellen</h2>
+      </td>
+      <td (click)="ind()">
+        <h2 >Unsere Industrie 4.0 Anlage</h2>
+      </td>
+      <td (click)="sch()">
+        <h2>Unser Schulzentrum</h2>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="entrydiv" *ngIf="viewstate=='pen'">
+  <form action="select">
+    <select name="Farbe" placeholder="Farbe">
+        <option *ngFor="let colors of colors" value="colors">{{colors.farbe}}</option>
+      </select>
+    </form>
+    <button class="btn" type="submit">Bestätigen</button>
+</div>
+
+<div class="entrydiv" *ngIf="viewstate=='ind'">
+  <h1>test</h1>
+</div>
+
+<div class="entrydiv" *ngIf="viewstate=='sch'">
+  <h1>Test</h1>
 </div>
 
 <div class="entrydiv">
-  <button class="btn" type="submit">Abmelden</button>
+  <button class="btn" type="submit" (click)="logout()">Abmelden</button>
 </div>
 <router-outlet></router-outlet>
