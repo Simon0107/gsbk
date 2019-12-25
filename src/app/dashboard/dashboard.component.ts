@@ -28,6 +28,10 @@ export class DashboardComponent implements OnInit {
   }
 
   logout() {
+    /**
+     * navigates back to the login page 
+     * sets the viewstate of app.component to login 
+     */
     this.app.viewState ='login';
     this.app.inputPw='';
     this.app.inputUsr='';
@@ -41,7 +45,6 @@ export class DashboardComponent implements OnInit {
   ind() {
     this.viewstate='ind';
   }
-
   sch() {
     this.viewstate='sch';
   }

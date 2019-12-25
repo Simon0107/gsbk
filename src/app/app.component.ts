@@ -16,6 +16,9 @@ import { BackendService } from '../../services/backend.service';
  */
 export class AppComponent implements OnInit {
 
+  api: string='localhost:3000/user/';
+  user: User;
+
   constructor(
     private router: Router,
     private backend: BackendService,
